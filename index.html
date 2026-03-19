@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Fast 🔥</title>
+
+<meta http-equiv="refresh" content="5;url=https://www.instagram.com/arctic.soulx?igsh=MTN3MWc1aTFxaG83OQ==">
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background:black;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+
+.box {
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+img {
+    width:110px;
+    border-radius:50%;
+    box-shadow:0 0 25px #ff00cc;
+}
+
+h1 {
+    margin:10px;
+    font-size:26px;
+}
+
+.counter {
+    font-size:22px;
+    color:#00ffcc;
+}
+
+.spots {
+    color:red;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.btn {
+    padding:15px 30px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff0066,#ffcc00);
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:15px;
+}
+
+.popup {
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:rgba(0,0,0,0.7);
+    padding:10px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+/* particles */
+span {
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    animation:move 10s linear infinite;
+}
+@keyframes move {
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- music -->
+<audio autoplay loop>
+<source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav">
+</audio>
+
+<script>
+// particles
+for(let i=0;i<60;i++){
+ let s=document.createElement("span");
+ s.style.left=Math.random()*100+"%";
+ s.style.animationDuration=(Math.random()*5+5)+"s";
+ document.body.appendChild(s);
+}
+</script>
+
+<div class="box">
+    <img src="https://i.imgur.com/2DhmtJ4.png">
+    <h1>@arctic.soulx</h1>
+
+    <div class="counter" id="count">0 followers joined</div>
+    <div class="spots" id="spots">Only 100 spots left!</div>
+
+    <a href="https://www.instagram.com/arctic.soulx?igsh=MTN3MWc1aTFxaG83OQ==" class="btn">
+        👉 FOLLOW NOW
+    </a>
+
+    <p>Redirecting in 5 sec... ⏳</p>
+</div>
+
+<div class="popup" id="popup">Loading...</div>
+
+<script>
+// counter
+let count = 1200;
+setInterval(()=>{
+    count += Math.floor(Math.random()*8);
+    document.getElementById("count").innerText = count + " people joined 🔥";
+},1000);
+
+// spots decrease
+let spots = 100;
+setInterval(()=>{
+    if(spots>3){
+        spots--;
+        document.getElementById("spots").innerText = "Only " + spots + " spots left!";
+    }
+},1500);
+
+// popup names
+let names = ["Rahul","Aman","Soham","Riya","Sneha","Arjun","Priya"];
+setInterval(()=>{
+    let n = names[Math.floor(Math.random()*names.length)];
+    document.getElementById("popup").innerText = n + " just followed 🔥";
+},2000);
+</script>
+
+</body>
+</html>
